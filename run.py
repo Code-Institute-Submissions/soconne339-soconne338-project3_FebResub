@@ -230,10 +230,20 @@ def jokeSelection():
     jokes = ['doctor...doctor', 'knock knock', 'chicken crossing the road', 'Funny Limericks']
 
     def doctorJoke():
-        print("DOCTOR JOKE")
+        print("Doctor, Doctor! I feel like a pack of cards")
+        print("Sit over there and I 'll deal with you later")
+        print("************************")
+        print("Doctor, Doctor! I feel invisible ")
+        print("Who's next! ")
+        print("************************")
+        print("Doctor, Doctor! I feel like a wigwam")
+        print("You need to take it easy, you're too tense")
 
     def knockjoke():
-        print("Knock Joke")
+        print("Knock Knock! ")
+        print("Who's there")
+        print("Nobel Who?")
+        print("Nobel... that's why i knocked on the door!")
     
     def chickenjoke():
         print("Why did the chicken cross the road? ")
