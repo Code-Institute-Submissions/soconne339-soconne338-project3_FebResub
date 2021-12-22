@@ -1,47 +1,45 @@
 def requestName():
+    # This function will request the user's name
     name = input("What's your name? \n")
     if name:
-        print("Hello " + name +"`\n")
+        print("Hello " + name + "`\n")
 
-def heroStory():
+
+def item_selection(items, title_message, input_message):
+    # The purpose of this function is to create a dictionary that each of the
+    # stories can reference from. This avoids having to repeat code inside each
+    # of the story functions. 
+    print(title_message)
+    valid_input = False
+
+    for (i, item) in enumerate(items, start=0):
+        print(i, item)
+    while not valid_input:
+        input_value = input(input_message)
+        try:     
+            num = int(input_message)
+            item = items[num]
+            valid_input = True
+        except (ValueError, IndexError):
+            print("Invalid Input\n")
+            valid_input = False
+        return item
+
+
+def hero_story():
     names = ['Brian', 'John', 'Alan', 'Robert', 'Tom', 'George']
     transport = ['car', 'bicycle', 'walking', 'motorbike']
     locations = ['Dublin', 'Cork', 'Galway', 'Limerick', 'Greystones']
-    animals =['dog', 'cat', 'hamster', 'rabbit']
+    animals = ['dog', 'cat', 'hamster', 'rabbit']
 
-    def nameSelection():
-        print("Names")
-        for (i, item) in enumerate(names, start=0):    #code gotten from https://stackoverflow.com/questions/34753872/how-do-i-display-the-the-index-of-a-list-element-in-python
-            print(i, item)
-        num = int(input("Please choose a Name \n"))
-        return names[num]
-
-    def transportSelection():
-        print("Transport options")
-        for (i, item) in enumerate(transport, start=0):    #code gotten from https://stackoverflow.com/questions/34753872/how-do-i-display-the-the-index-of-a-list-element-in-python
-            print(i, item)
-        num = int(input("Please choose a transport option \n"))
-        return transport[num]    
-
-    def locationSelection():
-        print("Locations")
-        for (i, item) in enumerate(locations, start=0):    #code gotten from https://stackoverflow.com/questions/34753872/how-do-i-display-the-the-index-of-a-list-element-in-python
-            print(i, item)
-        num = int(input("Please choose a location \n"))
-        return locations[num]
+    name = item_selection(names, "Names", "Please choose a name:")
+    transport = item_selection(transport, "Transport", "Please choose a transport option")
+    location = item_selection(locations, "Locations", "Please choose a location")
+    animal = item_selection(animals, "animals", 'Please choose an animal')
 
 
-    def animalSelection():
-        print("Animals")
-        for (i, item) in enumerate(animals, start=0):    #code gotten from https://stackoverflow.com/questions/34753872/how-do-i-display-the-the-index-of-a-list-element-in-python
-            print(i, item)        
-        num = int(input("Please choose an Animal \n"))
-        return animals[num]
 
-    location = locationSelection()
-    name = nameSelection()
-    transport = transportSelection()
-    animal = animalSelection()
+
     print("----------------------------")
     print("    |@@@@|     |####| ")
     print("    |@@@@|     |####| ")
@@ -70,47 +68,19 @@ def heroStory():
     if morestories == "yes":
         mainFunction()
     else:
-        exit(); 
+        exit()
 
-def christmasStory():
-    names =         ['Emily', 'Saoirse', 'Grace', 'Hannah', 'Sheena', 'Abigail']
+
+def christmas_story():
+    names = ['Emily', 'Saoirse', 'Grace', 'Hannah', 'Sheena', 'Abigail']
     familymembers = ['brother', 'sister', 'mother', 'father']
-    moods =         ['excited', 'nervous' , 'happy', 'anxious']
-    gifts =         ['toys', 'presents', 'goodies']
-
-    def nameSelection():
-            print("Names")
-            for (i, item) in enumerate(names, start=0):    #code gotten from https://stackoverflow.com/questions/34753872/how-do-i-display-the-the-index-of-a-list-element-in-python
-                print(i, item)            
-            num = int(input("Please choose a Name? \n"))
-            return names[num]
-
-    def familySelection():
-            print("Family Members   ")
-            for (i, item) in enumerate(familymembers, start=0):    #code gotten from https://stackoverflow.com/questions/34753872/how-do-i-display-the-the-index-of-a-list-element-in-python
-                print(i, item)    
-            num = int(input("Please choose a family member? \n"))
-            return familymembers[num]
-        
-    def moodSelection():
-            print("Moods")
-            for (i, item) in enumerate(moods, start=0):    #code gotten from https://stackoverflow.com/questions/34753872/how-do-i-display-the-the-index-of-a-list-element-in-python
-                print(i, item)            
-            num = int(input("Please choose a mood? \n"))
-            return moods[num]
-
-    def giftSelection():
-            print("Gifts")
-     
-            for (i, item) in enumerate(gifts, start=0):    #code gotten from https://stackoverflow.com/questions/34753872/how-do-i-display-the-the-index-of-a-list-element-in-python
-                print(i, item)       
-            num = int(input("Please choose a gift? \n"))
-            return gifts[num]     
-
-    name = nameSelection()
-    family = familySelection()
-    gift = giftSelection()
-    mood = moodSelection()        
+    moods = ['excited', 'nervous' , 'happy', 'anxious']
+    gifts = ['toys', 'presents', 'goodies']
+    
+    name = item_selection(names, "Names", "Please choose a name")
+    family = item_selection(familymembers, "Family members", "Please choose a family member")
+    gift = item_selection(gifts, "gifts", "Please choose a gift")
+    mood = item_selection(moods, "Moods", "Please choose a mood")     
     print(" .       .        _+_        .                  .             .")
     print("                  /|\ ")
     print("        .           *     .       .            .                   . ")
@@ -145,67 +115,36 @@ def christmasStory():
     story += f"{name} didn't care about {gift} from Santa Claus. She was just so happy to be able to have her {family} on Christmas day \n "
     story += f"Christmas day arrived and {name} woke up early. She was {mood} when she heard the door open and in walked her {family} \n"
     story += f"Emily ran into her {family}s arms and embraced them with the biggest hug ever.\n"
-    story += f"It was the best Christmas ever!"
+    story += "It was the best Christmas ever!"
     print(story)
     morestories = input("Do you want another story ? \n")
 
     if morestories == "yes":
         mainFunction()
     else:
-        exit(); 
+        exit() 
 
-def sportingAchievement():
+
+def sporting_achievement():
+    # List of variables
     sports = ['football', 'rugby', 'gaelic football', 'hurling']
     injuries = ['leg', 'hamstring', 'arm', 'ankle']
     cities = ['Belfast', 'Wexford', 'Waterford', 'Sligo']
-    ajectives = ['fantastic', 'amazing', 'incredible', 'brilliant']
+    adjectives = ['fantastic', 'amazing', 'incredible', 'brilliant']
+    # Define our variables for the story
+    sport = item_selection(sports, "Sports", "Please choose a sport")
+    injury = item_selection(injuries, "Injuries", "Please choose an injury")
+    city = item_selection(cities, "Cities", "Please choose a city")
+    adjective = item_selection(adjectives, "Adjectives", "Please choose an adjective")
+    # Printed story
 
-
-    def sportsSelection():
-        print("Sports options")
-
-        for (i, item) in enumerate(sports, start=0):    #code gotten from https://stackoverflow.com/questions/34753872/how-do-i-display-the-the-index-of-a-list-element-in-python
-                print(i, item)
-
-        num = int(input(" Please choose a sport? \n"))
-        return sports[num]        
-
-    def injurySelection():
-        print("Injury options")
-
-        for (i, item) in enumerate(injuries, start=0):    #code gotten from https://stackoverflow.com/questions/34753872/how-do-i-display-the-the-index-of-a-list-element-in-python
-                print(i, item)
-        num = int(input(" Please choose an injury option? \n"))
-        return injuries[num]    
-
-    def citySelection():
-        print(" Cities")
-        
-        for (i, item) in enumerate(cities, start=0):    #code gotten from https://stackoverflow.com/questions/34753872/how-do-i-display-the-the-index-of-a-list-element-in-python
-                print(i, item)
-        num = int(input(" Please choose a city? \n"))
-        return cities[num]
-
-
-    def adjectiveSelection():
-        print(" Adjectives")
-        
-        for (i, item) in enumerate(ajectives, start=0):    #code gotten from https://stackoverflow.com/questions/34753872/how-do-i-display-the-the-index-of-a-list-element-in-python
-                print(i, item)
-        num = int(input(" Please choose a city? \n"))
-        return ajectives[num]
-
-    sport = sportsSelection()
-    injury = injurySelection()
-    city = citySelection()
-    adjective = adjectiveSelection()
     story = "..............................................................\n"
     story += "..............................................................\n" 
     story += f" It was the day of the great {sport} final. The whole of {city} were at the stadium \n"
-    story += f" with 10 mins to go, both teams were level. The atmosphere was tense  \n"
+    story += " with 10 mins to go, both teams were level. The atmosphere was tense  \n"
     story += f" The {sport} attacker was fouled just before they scored. Because of this they had a {injury} injury \n"
-    story += f" The penalty was awarded and everyone was tense \n"
-    story += f" The home team won the match and everyone in the stadium went electric. \n" 
+    story += " The penalty was awarded and everyone was tense \n"
+    story += " The home team won the match and everyone in the stadium went electric. \n" 
     story += f" It was such a {adjective} match! "
     print(story)
     morestories = input("Do you want another story ? \n")
@@ -213,12 +152,13 @@ def sportingAchievement():
     if morestories == "yes":
         mainFunction()
     else:
-        exit();  
+        exit() 
 
-def jokeSelection(): 
+
+def joke_selection(): 
     jokes = ['doctor...doctor', 'knock knock', 'chicken crossing the road', 'Funny Limericks']
 
-    def doctorJoke():
+    def doctor_joke():
         print("Doctor, Doctor! I feel like a pack of cards")
         print("Sit over there and I 'll deal with you later")
         print("************************")
