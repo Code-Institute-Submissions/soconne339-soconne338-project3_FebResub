@@ -36,10 +36,6 @@ def hero_story():
     transport = item_selection(transport, "Transport", "Please choose a transport option")
     location = item_selection(locations, "Locations", "Please choose a location")
     animal = item_selection(animals, "animals", 'Please choose an animal')
-
-
-
-
     print("----------------------------")
     print("    |@@@@|     |####| ")
     print("    |@@@@|     |####| ")
@@ -74,13 +70,12 @@ def hero_story():
 def christmas_story():
     names = ['Emily', 'Saoirse', 'Grace', 'Hannah', 'Sheena', 'Abigail']
     familymembers = ['brother', 'sister', 'mother', 'father']
-    moods = ['excited', 'nervous' , 'happy', 'anxious']
+    moods = ['excited', 'nervous', 'happy', 'anxious']
     gifts = ['toys', 'presents', 'goodies']
-    
     name = item_selection(names, "Names", "Please choose a name")
     family = item_selection(familymembers, "Family members", "Please choose a family member")
     gift = item_selection(gifts, "gifts", "Please choose a gift")
-    mood = item_selection(moods, "Moods", "Please choose a mood")     
+    mood = item_selection(moods, "Moods", "Please choose a mood")
     print(" .       .        _+_        .                  .             .")
     print("                  /|\ ")
     print("        .           *     .       .            .                   . ")
@@ -109,7 +104,7 @@ def christmas_story():
     print("**************************************************************************")
     print("**************************************************************************")
     story = "..............................................................\n"
-    story += "..............................................................\n" 
+    story += "..............................................................\n"
     story += f"It was the night before Christmas and {name} was really {mood}.\n"
     story += f"She would finally get to see her {family} after so long.\n"
     story += f"{name} didn't care about {gift} from Santa Claus. She was just so happy to be able to have her {family} on Christmas day \n "
@@ -122,7 +117,7 @@ def christmas_story():
     if morestories == "yes":
         mainFunction()
     else:
-        exit() 
+        exit()
 
 
 def sporting_achievement():
@@ -139,7 +134,7 @@ def sporting_achievement():
     # Printed story
 
     story = "..............................................................\n"
-    story += "..............................................................\n" 
+    story += "..............................................................\n"
     story += f" It was the day of the great {sport} final. The whole of {city} were at the stadium \n"
     story += " with 10 mins to go, both teams were level. The atmosphere was tense  \n"
     story += f" The {sport} attacker was fouled just before they scored. Because of this they had a {injury} injury \n"
@@ -152,7 +147,7 @@ def sporting_achievement():
     if morestories == "yes":
         mainFunction()
     else:
-        exit() 
+        exit()
 
 
 def joke_selection(): 
@@ -168,13 +163,13 @@ def joke_selection():
         print("Doctor, Doctor! I feel like a wigwam")
         print("You need to take it easy, you're too tense")
 
-    def knockjoke():
+    def knock_joke():
         print("Knock Knock! ")
         print("Who's there")
         print("Nobel Who?")
         print("Nobel... that's why i knocked on the door!")
-    
-    def chickenjoke():
+
+    def chicken_joke():
         print("Why did the chicken cross the road? ")
         print("To get to the otherside")
         print("************************")
@@ -184,98 +179,80 @@ def joke_selection():
         print("Why did the sheep cross the road?")
         print("It was the chicken's day off")
 
-    def limerickjoke():
+    def limerick_joke():
         print("There once was a farmer from leeds ")
         print("Who swallowed a packet of seeds")        
         print("It soon came to pass")
         print("He was covered in grass")
         print("But has all the tomatoes he needs")
 
-    for (i, item) in enumerate(jokes, start=0):    #code gotten from https://stackoverflow.com/questions/34753872/how-do-i-display-the-the-index-of-a-list-element-in-python
-                print(i, item)
+    for (i, item) in enumerate(jokes, start=0):    
+        print(i, item)
     jokeChoice = int(input("What Joke type would you like to hear from the list? "))
 
     if jokeChoice == 0:
-        doctorJoke()
+        doctor_joke()
 
     elif jokeChoice == 1:
-        knockjoke()
+        knock_joke()
 
     elif jokeChoice == 2:
-        chickenjoke()
+        chicken_joke()
 
-    elif jokeChoice == 3: 
-        limerickjoke()            
-    
+    elif jokeChoice == 3:
+        limerick_joke()
+
     else: 
         print("Invalid Selection")
-        jokeSelection()
+        joke_selection()
 
     morejokes = input("Would you like another joke? yes/no? ")
 
     if morejokes == "yes":
-        jokeSelection()
+        joke_selection()
     else:
         morestories = input("Would you to read something else? yes/no")
 
-        if(morestories == "yes" ):
+        if(morestories == "yes"):
             mainFunction()
         else:
             exit()
 
 
-
-    
-
-
-
 def mainFunction():
-
-    
-    
     print("Welcome to the story vault ")
     print("Please choose a story from the list below \n")
-
     print("1. Story about a hero character")
     print("2. Story about a christmas reunion")
     print("3. Story about a great sporting match")
     print("4. A funny joke to cheer you up")
     print("5. Exit")
-
-    
-
-    
     choice = int(input("Please choose a story option: 1, 2, 3, 4.............. \n"))
-    
-
-        
-
-    
-
     if(choice == 1):
-        heroStory()
+        hero_story()
 
     elif (choice == 2):
-        christmasStory()
+        christmas_story()
 
     elif (choice == 3): 
 
-        sportingAchievement()
+        sporting_achievement()
 
     elif (choice == 4):
-        jokeSelection()
+        joke_selection()
 
     elif (choice == 5):
         exit()
-    
-    elif ( type(choice) != int):
+   
+    elif (type(choice) != int):
 
         print("Invalid Selection")
         mainFunction()
 
-    else: 
+    else:
         print("invalid selection")
-        mainFunction()    
+        mainFunction()
+
 
 requestName()
 mainFunction()
