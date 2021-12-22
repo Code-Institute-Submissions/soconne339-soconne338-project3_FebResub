@@ -23,9 +23,6 @@ def heroStory():
         num = int(input("Please choose a transport option \n"))
         return transport[num]    
 
-
-
-
     def locationSelection():
         print("Locations")
         for (i, item) in enumerate(locations, start=0):    #code gotten from https://stackoverflow.com/questions/34753872/how-do-i-display-the-the-index-of-a-list-element-in-python
@@ -69,12 +66,9 @@ def heroStory():
     story += f"One day {name} was going to school when he saw a large black {animal} running into the traffic.\n"
     story += f"{name} immediately jumped and saved the {animal}. Everyone cheered. {name} was a hero."
     print(story)
-
     morestories = input("Do you want another story ? \n")
-
     if morestories == "yes":
         mainFunction()
-
     else:
         exit(); 
 
@@ -100,7 +94,6 @@ def christmasStory():
         
     def moodSelection():
             print("Moods")
-
             for (i, item) in enumerate(moods, start=0):    #code gotten from https://stackoverflow.com/questions/34753872/how-do-i-display-the-the-index-of-a-list-element-in-python
                 print(i, item)            
             num = int(input("Please choose a mood? \n"))
@@ -158,7 +151,6 @@ def christmasStory():
 
     if morestories == "yes":
         mainFunction()
-
     else:
         exit(); 
 
@@ -220,16 +212,13 @@ def sportingAchievement():
 
     if morestories == "yes":
         mainFunction()
-
     else:
         exit();  
-
-
 
 def jokeSelection(): 
     jokes = ['doctor...doctor', 'knock knock', 'chicken crossing the road', 'Funny Limericks']
 
-    def doctorjoke():
+    def doctorJoke():
         print("Doctor, Doctor! I feel like a pack of cards")
         print("Sit over there and I 'll deal with you later")
         print("************************")
@@ -267,7 +256,7 @@ def jokeSelection():
     jokeChoice = int(input("What Joke type would you like to hear from the list? "))
 
     if jokeChoice == 0:
-        doctorjoke()
+        doctorJoke()
 
     elif jokeChoice == 1:
         knockjoke()
