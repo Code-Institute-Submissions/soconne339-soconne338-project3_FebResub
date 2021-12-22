@@ -229,7 +229,7 @@ def sportingAchievement():
 def jokeSelection(): 
     jokes = ['doctor...doctor', 'knock knock', 'chicken crossing the road', 'Funny Limericks']
 
-    def doctorJoke():
+    def doctorjoke():
         print("Doctor, Doctor! I feel like a pack of cards")
         print("Sit over there and I 'll deal with you later")
         print("************************")
