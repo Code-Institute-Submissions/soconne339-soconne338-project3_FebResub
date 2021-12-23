@@ -178,9 +178,8 @@ def joke_selection():
     # list of joke types 
     jokes = ['doctor...doctor', 'knock knock', 'chicken crossing the road', 'Funny Limericks']
 
-    
     def doctor_joke():
-    # doctor joke function 
+        # function which prints the doctor, doctor joke
         print("Doctor, Doctor! I feel like a pack of cards")
         print("Sit over there and I 'll deal with you later")
         print("************************")
@@ -191,12 +190,14 @@ def joke_selection():
         print("You need to take it easy, you're too tense")
 
     def knock_joke():
+        # function which prints the knock knock joke
         print("Knock Knock! ")
         print("Who's there")
         print("Nobel Who?")
         print("Nobel... that's why i knocked on the door!")
 
     def chicken_joke():
+        # function which prints the chicken cross the road joke
         print("Why did the chicken cross the road? ")
         print("To get to the otherside")
         print("************************")
@@ -207,6 +208,7 @@ def joke_selection():
         print("It was the chicken's day off")
 
     def limerick_joke():
+        # function which prints the limerick joke
         print("There once was a farmer from leeds ")
         print("Who swallowed a packet of seeds")        
         print("It soon came to pass")
@@ -216,8 +218,10 @@ def joke_selection():
     for (i, item) in enumerate(jokes, start=0):    
         print(i, item)
     jokeChoice = int(input("What Joke type would you like to hear from the list? "))
+    # list all of the joke with the number proceeding the choice
 
     if jokeChoice == 0:
+
         doctor_joke()
 
     elif jokeChoice == 1:
@@ -247,6 +251,7 @@ def joke_selection():
 
 
 def mainFunction():
+    # Main function which calls all the other functions
     print("Welcome to the story vault ")
     print("Please choose a story from the list below \n")
     print("1. Story about a hero character")
@@ -261,7 +266,7 @@ def mainFunction():
     elif (choice == 2):
         christmas_story()
 
-    elif (choice == 3): 
+    elif (choice == 3):
 
         sporting_achievement()
 
@@ -270,7 +275,7 @@ def mainFunction():
 
     elif (choice == 5):
         exit()
-   
+
     elif (type(choice) != int):
 
         print("Invalid Selection")
