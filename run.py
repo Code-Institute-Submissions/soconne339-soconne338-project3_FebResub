@@ -1,5 +1,6 @@
 def requestName():
-    # This function will request the user's name
+    # This function will request the user's name which will then be
+    # printed before the list of stories is 
     name = input("What's your name? \n")
     if name:
         print("Hello " + name + "`\n")
@@ -20,7 +21,10 @@ def item_selection(items, title_message, input_message):
             num = int(input_message)
             item = items[num]
             valid_input = True
-        except (ValueError, IndexError):
+        except (ValueError, IndexError): 
+            # throws exception so that
+            # if a string or value greater than list index
+
             print("Invalid Input\n")
             valid_input = False
         return item
