@@ -36,13 +36,17 @@ def hero_story():
     transport = ['car', 'bicycle', 'walking', 'motorbike']
     locations = ['Dublin', 'Cork', 'Galway', 'Limerick', 'Greystones']
     animals = ['dog', 'cat', 'hamster', 'rabbit']
-
+    #
+    #
     name = item_selection(names, "Names", "Please choose a name:") 
     # Uses dictionary to create variable for name
     transport = item_selection(transport, "Transport", "Please choose a transport option")
-    # 
+    # Uses dictionary to create variable for transport
     location = item_selection(locations, "Locations", "Please choose a location")
+    # Uses dictionary to create variable for location
     animal = item_selection(animals, "animals", 'Please choose an animal')
+    # Uses dictionary to create variable for animal
+    #
     print("----------------------------")
     print("    |@@@@|     |####| ")
     print("    |@@@@|     |####| ")
@@ -69,20 +73,32 @@ def hero_story():
     print(story)
     morestories = input("Do you want another story ? \n")
     if morestories == "yes":
+        # conditional statement asking user if they want to hear another story which will call the mainFunction() function
         mainFunction()
     else:
+        # If user inputs anything other than 'yes' then the program will exit
         exit()
 
 
 def christmas_story():
+    # Story 2 
+    # various lists containing the variables for the story
     names = ['Emily', 'Saoirse', 'Grace', 'Hannah', 'Sheena', 'Abigail']
     familymembers = ['brother', 'sister', 'mother', 'father']
     moods = ['excited', 'nervous', 'happy', 'anxious']
     gifts = ['toys', 'presents', 'goodies']
+    # 
+    #
     name = item_selection(names, "Names", "Please choose a name")
+    # Uses dictionary to create name variable
     family = item_selection(familymembers, "Family members", "Please choose a family member")
+    # Uses dictionary to create family member variable
     gift = item_selection(gifts, "gifts", "Please choose a gift")
+    # Uses dictionary to create gift variable
     mood = item_selection(moods, "Moods", "Please choose a mood")
+    # Uses dictionary to create mood varaible
+    #
+    # Print story using the variables created above from the list objects
     print(" .       .        _+_        .                  .             .")
     print("                  /|\ ")
     print("        .           *     .       .            .                   . ")
@@ -121,10 +137,10 @@ def christmas_story():
     print(story)
     morestories = input("Do you want another story ? \n")
 
-    if morestories == "yes":
-        mainFunction()
+    if morestories == "yes": # ask user if they want another story
+        mainFunction() # if yes
     else:
-        exit()
+        exit() # if user inputs anything other than yes then exit program
 
 
 def sporting_achievement():
@@ -158,9 +174,13 @@ def sporting_achievement():
 
 
 def joke_selection(): 
+    # joke selection function 
+    # list of joke types 
     jokes = ['doctor...doctor', 'knock knock', 'chicken crossing the road', 'Funny Limericks']
 
+    
     def doctor_joke():
+    # doctor joke function 
         print("Doctor, Doctor! I feel like a pack of cards")
         print("Sit over there and I 'll deal with you later")
         print("************************")
