@@ -1,4 +1,4 @@
-def requestName():
+def request_name():
     # This function will request the user's name which will then be
     # printed before the list of stories is 
     name = input("What's your name? \n")
@@ -73,8 +73,8 @@ def hero_story():
     print(story)
     morestories = input("Do you want another story ? \n")
     if morestories == "yes":
-        # conditional statement asking user if they want to hear another story which will call the mainFunction() function
-        mainFunction()
+        # conditional statement asking user if they want to hear another story which will call the main_function() function
+        main_function()
     else:
         # If user inputs anything other than 'yes' then the program will exit
         exit()
@@ -138,7 +138,7 @@ def christmas_story():
     morestories = input("Do you want another story ? \n")
 
     if morestories == "yes": # ask user if they want another story
-        mainFunction() # if yes
+        main_function() # if yes
     else:
         exit() # if user inputs anything other than yes then exit program
 
@@ -168,7 +168,7 @@ def sporting_achievement():
     morestories = input("Do you want another story ? \n")
 
     if morestories == "yes":
-        mainFunction()
+        main_function()
     else:
         exit()
 
@@ -245,36 +245,42 @@ def joke_selection():
         morestories = input("Would you to read something else? yes/no")
 
         if(morestories == "yes"):
-            mainFunction()
+            main_function()
         else:
             exit()
 
 
-def mainFunction():
+def main_function():
     # Main function which calls all the other functions
     # List of all the stories in program
-    stories = ['Story about a hero character', 'Story about a Christmas reunion', 'Story about a great sporting match', 'A funny joke to cheer you up']
+    print("Welcome to the story vault ")
+    print("Please choose a story from the list below \n")
+    print("1. Story about a hero character")
+    print("2. Story about a christmas reunion")
+    print("3. Story about a great sporting match")
+    print("4. A funny joke to cheer you up")
+    print("5. Exit")
+    story_choice = int(input("Please choose a story option: 1, 2, 3, 4.............. \n"))
     
-    storyChoice = item_selection(stories, "Stories", "Please choose a story from the options above")
+    
 
-    if(storyChoice == 1):
+    if(story_choice == 1):
         hero_story()
-    elif (storyChoice == 2):
+    elif (story_choice == 2):
         christmas_story()
-    elif (storyChoice == 3):
+    elif (story_choice == 3):
         sporting_achievement()
-    elif (storyChoice == 4):
+    elif (story_choice == 4):
         joke_selection()
-    elif (storyChoice == 5):
+    elif (story_choice == 5):
         exit()
     else:
         print("invalid selection")
-        mainFunction()
+        main_function()
 
 
-requestName()
-mainFunction()
-
+request_name()
+main_function()
 
 
 
