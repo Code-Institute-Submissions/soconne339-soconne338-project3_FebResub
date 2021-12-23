@@ -1,9 +1,9 @@
 def request_name():
     # This function will request the user's name which will then be
     # printed before the list of stories is 
-    name = input("What's your name? \n")
+    name = input("What's your name?")
     if name:
-        print("Hello " + name + "`\n")
+        print(f"Hello {name}")
 
 
 def item_selection(items, title_message, input_message):
@@ -71,7 +71,7 @@ def hero_story():
     story += f"One day {name} was going to school when he saw a large black {animal} running into the traffic.\n"
     story += f"{name} immediately jumped and saved the {animal}. Everyone cheered. {name} was a hero."
     print(story)
-    morestories = input("Do you want another story ? \n")
+    morestories = input("Do you want another story ?")
     if morestories == "yes":
         # conditional statement asking user if they want to hear another story which will call the main_function() function
         main_function()
@@ -135,7 +135,7 @@ def christmas_story():
     story += f"Emily ran into her {family}s arms and embraced them with the biggest hug ever.\n"
     story += "It was the best Christmas ever!"
     print(story)
-    morestories = input("Do you want another story ? \n")
+    morestories = input("Do you want another story ?")
 
     if morestories == "yes": # ask user if they want another story
         main_function() # if yes
@@ -165,7 +165,7 @@ def sporting_achievement():
     story += " The home team won the match and everyone in the stadium went electric. \n" 
     story += f" It was such a {adjective} match! "
     print(story)
-    morestories = input("Do you want another story ? \n")
+    morestories = input("Do you want another story ?")
 
     if morestories == "yes":
         main_function()
@@ -260,7 +260,7 @@ def main_function():
     print("3. Story about a great sporting match")
     print("4. A funny joke to cheer you up")
     print("5. Exit")
-    story_choice = int(input("Please choose a story option: 1, 2, 3, 4.............. \n"))
+    story_choice = int(input("Please choose a story option: 1, 2, 3, 4.............. "))
     
     
 
