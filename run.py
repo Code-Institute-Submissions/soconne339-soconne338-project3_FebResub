@@ -252,35 +252,21 @@ def joke_selection():
 
 def mainFunction():
     # Main function which calls all the other functions
-    print("Welcome to the story vault ")
-    print("Please choose a story from the list below \n")
-    print("1. Story about a hero character")
-    print("2. Story about a christmas reunion")
-    print("3. Story about a great sporting match")
-    print("4. A funny joke to cheer you up")
-    print("5. Exit")
-    choice = int(input("Please choose a story option: 1, 2, 3, 4.............. \n"))
-    if(choice == 1):
+    # List of all the stories in program
+    stories = ['Story about a hero character', 'Story about a Christmas reunion', 'Story about a great sporting match', 'A funny joke to cheer you up']
+    
+    storyChoice = item_selection(stories, "Stories", "Please choose a story from the options above")
+
+    if(storyChoice == 1):
         hero_story()
-
-    elif (choice == 2):
+    elif (storyChoice == 2):
         christmas_story()
-
-    elif (choice == 3):
-
+    elif (storyChoice == 3):
         sporting_achievement()
-
-    elif (choice == 4):
+    elif (storyChoice == 4):
         joke_selection()
-
-    elif (choice == 5):
+    elif (storyChoice == 5):
         exit()
-
-    elif (type(choice) != int):
-
-        print("Invalid Selection")
-        mainFunction()
-
     else:
         print("invalid selection")
         mainFunction()
