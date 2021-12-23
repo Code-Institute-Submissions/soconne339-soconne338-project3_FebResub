@@ -24,20 +24,23 @@ def item_selection(items, title_message, input_message):
         except (ValueError, IndexError): 
             # throws exception so that
             # if a string or value greater than list index
-
             print("Invalid Input\n")
             valid_input = False
         return item
 
 
 def hero_story():
+    # Story 1 
+    # Python lists are for each of the nouns as part of the story
     names = ['Brian', 'John', 'Alan', 'Robert', 'Tom', 'George']
     transport = ['car', 'bicycle', 'walking', 'motorbike']
     locations = ['Dublin', 'Cork', 'Galway', 'Limerick', 'Greystones']
     animals = ['dog', 'cat', 'hamster', 'rabbit']
 
-    name = item_selection(names, "Names", "Please choose a name:")
+    name = item_selection(names, "Names", "Please choose a name:") 
+    # Uses dictionary to create variable for name
     transport = item_selection(transport, "Transport", "Please choose a transport option")
+    # 
     location = item_selection(locations, "Locations", "Please choose a location")
     animal = item_selection(animals, "animals", 'Please choose an animal')
     print("----------------------------")
