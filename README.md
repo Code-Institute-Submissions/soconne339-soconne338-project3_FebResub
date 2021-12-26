@@ -48,6 +48,15 @@ To achieve the goal of the project I included the following:
 
 ## Technologies Used
 
+For this project I used the following software: 
+
+- Github
+- Sketch ( To create the flowchart)
+- VSCode Desktop (to create the initial code)
+- Python tutor
+- Heroku (To show the python program as a web app)
+- MacOSX on MacbookPro 13
+
 ## Deployment
 
 ## Testing
