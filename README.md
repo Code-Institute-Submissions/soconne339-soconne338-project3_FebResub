@@ -46,6 +46,12 @@ To achieve the goal of the project I included the following:
 
 ## Main Design
 
+The program features a variety of python functions that make up each story. Eg. for the Hero story, the Christmas Story and the Sporting Story. Also the jokes are containing within its own python function. There is a also a python function to ask for the user's name. To recall any of the functions, I created a main_function() The conditional ststement decides which function is called or in this case which story is chosen. 
+
+To avoid having to repeat code, a dictionary function. This function takes 3 input; the name of the list, the title message and the input message. This function also checks for any index error and value error using a try and catch statement. 
+
+Overall the program uses quite a simple design and the output text is clear and concise. There is no ambiguity for the user.
+
 ## Technologies Used
 
 For this project I used the following software: 
