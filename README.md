@@ -33,6 +33,13 @@ The program was outputted as a terminal therefore it's a single page application
 
 ## Scope
 
+To achieve the goal of the project I included the following: 
+
+1. A list of 3 stories and a selection of jokes
+2. A personal greeting at the beginning
+3. The user can choose another story after choosing variables for the current story
+4. The option to end the program at any time.
+
 ## Main Design
 
 ## Technologies Used
