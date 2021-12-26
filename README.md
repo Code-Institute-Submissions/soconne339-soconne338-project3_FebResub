@@ -32,6 +32,8 @@ The ideal client for this program is:
 
 The program was outputted as a terminal therefore it's a single page application. Python was used to generate the data and stories. I have included a flow-chart to illustrate the program's process. 
 
+![flowchart of python program](./assets/images/flow-chart.png)
+
 
 ## Scope
 
