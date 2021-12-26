@@ -1,6 +1,8 @@
-# Story Vault - A Selection of stories for your perusal
+# Story Vault - A Selection of stories for your Enjoyment
 
 View the live project here
+
+![responsive image](./assets/images/Reponsive.png)
 
 This image is from Am I responsive
 
