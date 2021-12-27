@@ -86,3 +86,7 @@ To deploy this page to Heroku from GitHub, do the following:
 ## Validation
 
 ## Credits
+
+- I would like to thank my mentor Guido Cecilio for his guidance throughout the whole project
+- I found out the enumerate code from the following link: [Stackoverflow Code](https://stackoverflow.com/questions/34753872/how-do-i-display-the-the-index-of-a-list-element-in-python)
+- I used [](https://www.youtube.com/watch?v=7-NFFf0ViBY) as a help for this project 
