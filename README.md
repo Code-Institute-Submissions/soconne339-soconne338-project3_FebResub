@@ -94,6 +94,22 @@ The user is requested to input the value next to the story. As soon as this is d
 
 ![testing image 2](./assets/images/program-3.png)
 
+The program asks for many different variables for the story. 
+
+[testing image 3(./assets/images/program-4.png)
+
+The user can create the story exactly how they want it. rf
+
+[testing image 3(./assets/images/program-5.png)
+
+Eventually after the user inputs the values for each variable from each list the story prints with the variables.
+
+[testing image 3(./assets/images/program-6.png)
+
+If the user inputs a value greater than the index or provides a value that can't be cast to an integer, then the code will return a invalid error. The exception for ValueError and IndexError are thrown in this case. 
+
+![](./assets/images/program-8.png)
+
 ## Validation
 
 ## Credits
