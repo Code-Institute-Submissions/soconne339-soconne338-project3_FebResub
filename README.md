@@ -100,7 +100,7 @@ The program asks for many different variables for the story.
 
 The user can create the story exactly how they want it. rf
 
-![testing image 3(./assets/images/program-5.png)
+![testing image 3](./assets/images/program-5.png)
 
 Eventually after the user inputs the values for each variable from each list the story prints with the variables.
 
