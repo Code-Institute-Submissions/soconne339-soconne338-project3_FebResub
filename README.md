@@ -110,6 +110,15 @@ If the user inputs a value greater than the index or provides a value that can't
 
 ![testing image 4](./assets/images/program-8.png)
 
+
+## Main issues/ bugs
+
+The biggest problem faced for this project was deciding how to deal with users who inputted a non-integer value. I asked for help from my fellow classmates on Slack and then my mentor. Both suggested that I use a 'while' loop and then inside this loop use 'try' and 'catch' method. I experimented with a number of variations of this code before getting something that worked efficiently.
+
+I had to find a way to truncate the number of characters in each line before the program passed the pep8 validation. I searched Google and discovered that putting a \ allows you to carriage return to the next line without upsetting the syntax. 
+
+Other than those listed above I found the code to be quite simple. 
+
 ## Validation
 
 ## Credits
