@@ -104,7 +104,7 @@ The user can create the story exactly how they want it. rf
 
 Eventually after the user inputs the values for each variable from each list the story prints with the variables.
 
-[testing image 3(./assets/images/program-6.png)
+[testing image 3](./assets/images/program-6.png)
 
 If the user inputs a value greater than the index or provides a value that can't be cast to an integer, then the code will return a invalid error. The exception for ValueError and IndexError are thrown in this case. 
 
