@@ -96,7 +96,7 @@ The user is requested to input the value next to the story. As soon as this is d
 
 The program asks for many different variables for the story. 
 
-[testing image 3(./assets/images/program-4.png)
+[testing image 3](./assets/images/program-4.png)
 
 The user can create the story exactly how they want it. rf
 
