@@ -4,7 +4,7 @@ View the live project [here](https://soconne339-story-vault.herokuapp.com/)
 
 ![responsive image](./assets/images/Reponsive.png)
 
-This image is from Am I responsive
+This image is from [Am I responsive](http://ami.responsivedesign.is/)
 
 ## Intro
 
@@ -64,6 +64,22 @@ For this project I used the following software:
 - MacOSX on MacbookPro 13
 
 ## Deployment
+
+This project was deployed as a web application using Heroku. The project was also pushed to GitHub by using GitPod and Git commands. 
+
+To deploy this page to Heroku from GitHub, do the following:
+
+1. Create an account on [Heroku](www.heroku.com)
+2. Click ‘Create new App’ from the top menu
+3. Choose a name for the app and then choose the region as Europe
+4. In settings, add a build pack for Python and Node.js
+5. Click on Config Vars and add ‘Port’ for key and ‘8000’ for value
+6. Click save changes
+7 . Click on the deploy tab and then click connect to GitHub
+8. Search for repository name and then once this is done, click connect. 
+7. Deploys can be done manually or automatically. For this project, click ‘automatic deploys’
+9. After the project has been successfully deployed, click on ‘open app’ at the top of the page to open the newly created web app. 
+
 
 ## Testing
 
