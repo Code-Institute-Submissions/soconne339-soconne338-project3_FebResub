@@ -88,11 +88,11 @@ After the name is inputted the program says 'Hello Name' welcome to the story va
 
 After this all of the story options are printed with the corresponding number proceeding it
 
-![](.assets/images/program-1.png)
+![testing image 1](./assets/images/program-1.png)
 
 The user is requested to input the value next to the story. As soon as this is done the program lists the variables for each list as part of the story. Again the user is requested to input corresponding number next to the variable. 
 
-![](.assets/images/program-3.png)
+![testing image 2](./assets/images/program-3.png)
 
 ## Validation
 
