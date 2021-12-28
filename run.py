@@ -1,6 +1,6 @@
 def request_name():
     # This function will request the user's name which will then be
-    # printed before the list of stories is 
+    # printed before the list of stories is
     name = input("What's your name?")
     if name:
         print(f"Hello {name}")
@@ -9,7 +9,7 @@ def request_name():
 def item_selection(items, title_message, input_message):
     # The purpose of this function is to create a dictionary that each of the
     # stories can reference from. This avoids having to repeat code inside each
-    # of the story functions. 
+    # of the story functions.
     print(title_message)
     valid_input = False
 
@@ -17,11 +17,11 @@ def item_selection(items, title_message, input_message):
         print(i, item)
     while not valid_input:
         input_value = input(input_message)
-        try:     
+        try:
             num = int(input_message)
             item = items[num]
             valid_input = True
-        except (ValueError, IndexError): 
+        except (ValueError, IndexError):
             # throws exception so that
             # if a string or value greater than list index
             print("Invalid Input\n")
@@ -30,7 +30,7 @@ def item_selection(items, title_message, input_message):
 
 
 def hero_story():
-    # Story 1 
+    # Story 1
     # Python lists are for each of the nouns as part of the story
     names = ['Brian', 'John', 'Alan', 'Robert', 'Tom', 'George']
     transport = ['car', 'bicycle', 'walking', 'motorbike']
@@ -38,7 +38,7 @@ def hero_story():
     animals = ['dog', 'cat', 'hamster', 'rabbit']
     #
     #
-    name = item_selection(names, "Names", "Please choose a name:") 
+    name = item_selection(names, "Names", "Please choose a name:")
     # Uses dictionary to create variable for name
     transport = item_selection(transport, "Transport", "Please choose a transport option")
     # Uses dictionary to create variable for transport
@@ -64,7 +64,7 @@ def hero_story():
     print("       * * * * * *     ")
     print("        `-.....-'     ")
     story = "..............................................................\n"
-    story += "..............................................................\n" 
+    story += "..............................................................\n"
     story += f"Once upon a time there was a boy called {name}.\n"
     story += f"{name} lived in {location} with his parents.\n"
     story += f"Everyday {name} would travel to school by {transport}.\n "
@@ -81,13 +81,13 @@ def hero_story():
 
 
 def christmas_story():
-    # Story 2 
+    # Story 2
     # various lists containing the variables for the story
     names = ['Emily', 'Saoirse', 'Grace', 'Hannah', 'Sheena', 'Abigail']
     familymembers = ['brother', 'sister', 'mother', 'father']
     moods = ['excited', 'nervous', 'happy', 'anxious']
     gifts = ['toys', 'presents', 'goodies']
-    # 
+    #
     #
     name = item_selection(names, "Names", "Please choose a name")
     # Uses dictionary to create name variable
@@ -137,10 +137,10 @@ def christmas_story():
     print(story)
     morestories = input("Do you want another story ?")
 
-    if morestories == "yes": # ask user if they want another story
-        main_function() # if yes
+    if morestories == "yes":   # ask user if they want another story
+        main_function()   # if yes
     else:
-        exit() # if user inputs anything other than yes then exit program
+        exit()   # if user inputs anything other than yes then exit program
 
 
 def sporting_achievement():
@@ -162,7 +162,7 @@ def sporting_achievement():
     story += " with 10 mins to go, both teams were level. The atmosphere was tense  \n"
     story += f" The {sport} attacker was fouled just before they scored. Because of this they had a {injury} injury \n"
     story += " The penalty was awarded and everyone was tense \n"
-    story += " The home team won the match and everyone in the stadium went electric. \n" 
+    story += " The home team won the match and everyone in the stadium went electric. \n"
     story += f" It was such a {adjective} match! "
     print(story)
     morestories = input("Do you want another story ?")
@@ -173,9 +173,9 @@ def sporting_achievement():
         exit()
 
 
-def joke_selection(): 
-    # joke selection function 
-    # list of joke types 
+def joke_selection():
+    # joke selection function
+    # list of joke types
     jokes = ['doctor...doctor', 'knock knock', 'chicken crossing the road', 'Funny Limericks']
 
     def doctor_joke():
@@ -210,12 +210,12 @@ def joke_selection():
     def limerick_joke():
         # function which prints the limerick joke
         print("There once was a farmer from leeds ")
-        print("Who swallowed a packet of seeds")        
+        print("Who swallowed a packet of seeds")
         print("It soon came to pass")
         print("He was covered in grass")
         print("But has all the tomatoes he needs")
 
-    for (i, item) in enumerate(jokes, start=0):    
+    for (i, item) in enumerate(jokes, start=0):
         print(i, item)
     jokeChoice = int(input("What Joke type would you like to hear from the list? "))
     # list all of the joke with the number proceeding the choice
@@ -233,7 +233,7 @@ def joke_selection():
     elif jokeChoice == 3:
         limerick_joke()
 
-    else: 
+    else:
         print("Invalid Selection")
         joke_selection()
 
@@ -261,8 +261,6 @@ def main_function():
     print("4. A funny joke to cheer you up")
     print("5. Exit")
     story_choice = int(input("Please choose a story option: 1, 2, 3, 4.............. "))
-    
-    
 
     if(story_choice == 1):
         hero_story()
@@ -281,9 +279,3 @@ def main_function():
 
 request_name()
 main_function()
-
-
-
-
-
-    
