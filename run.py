@@ -40,9 +40,11 @@ def hero_story():
     #
     name = item_selection(names, "Names", "Please choose a name:")
     # Uses dictionary to create variable for name
-    transport = item_selection(transport, "Transport", "Please choose a transport option")
+    transport = item_selection(transport, "Transport",
+                               "Please choose a transport option")
     # Uses dictionary to create variable for transport
-    location = item_selection(locations, "Locations", "Please choose a location")
+    location = item_selection(locations, "Locations",
+                              "Please choose a location")
     # Uses dictionary to create variable for location
     animal = item_selection(animals, "animals", 'Please choose an animal')
     # Uses dictionary to create variable for animal
@@ -68,12 +70,17 @@ def hero_story():
     story += f"Once upon a time there was a boy called {name}.\n"
     story += f"{name} lived in {location} with his parents.\n"
     story += f"Everyday {name} would travel to school by {transport}.\n "
-    story += f"One day {name} was going to school when he saw a large black {animal} running into the traffic.\n"
-    story += f"{name} immediately jumped and saved the {animal}. Everyone cheered. {name} was a hero."
+    story += f"One day {name} was going to school" + \
+              "when he saw a large black {animal}" + \
+              "running into the traffic.\n"
+    story += f"{name} immediately jumped and saved the {animal}." + \
+              "Everyone cheered. {name} was a hero."
     print(story)
     morestories = input("Do you want another story ?")
     if morestories == "yes":
-        # conditional statement asking user if they want to hear another story which will call the main_function() function
+        # conditional statement asking user
+        # if they want to hear another story
+        # which will call the main_function() function
         main_function()
     else:
         # If user inputs anything other than 'yes' then the program will exit
@@ -91,7 +98,8 @@ def christmas_story():
     #
     name = item_selection(names, "Names", "Please choose a name")
     # Uses dictionary to create name variable
-    family = item_selection(familymembers, "Family members", "Please choose a family member")
+    family = item_selection(familymembers,
+                            "Family members", "Please choose a family member")
     # Uses dictionary to create family member variable
     gift = item_selection(gifts, "gifts", "Please choose a gift")
     # Uses dictionary to create gift variable
@@ -99,40 +107,20 @@ def christmas_story():
     # Uses dictionary to create mood varaible
     #
     # Print story using the variables created above from the list objects
-    print(" .       .        _+_        .                  .             .")
-    print("                  /|\ ")
-    print("        .           *     .       .            .                   . ")
-    print(".                i/|\i                                   .               .")
-    print("      .    .     // \\*              ")
-    print("                */( )\\      .                  .")
-    print("        .      i/*/ \ \i             ")
-    print(" .             / /* *\+\             ")
-    print("      .       */// + \*\\*                   .")
-    print("             i/  /^  ^\  \i    .               ... . ...")
-    print(".        .   / /+/ ()^ *\ \                 ........ .")
-    print("            i//*/_^- -  \*\i              ...  ..  ..               .")
-    print("    .       / // * ^ \ * \ \             ..")
-    print("          i/ /*  ^  * ^ + \ \i          ..     ___            _________")
-    print("          / / // / | \ \  \ *\         >U___^_[[_]|  ______  |_|_|_|_|_|")
-    print("   ____(|)____    |||                  [__________|=|______|=|_|_|_|_|_|=")
-    print("  |_____|_____|   |||                   oo OOOO oo   oo  oo   o-o   o-o ")
-    print(" -|     |     |-.-|||.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.- ")
-    print("  |_____|_____| ")
-    print("**************************************************************************")
-    print("**************************************************************************")
-    print("**************************************************************************")
-    print("**************************************************************************")
-    print("**************************************************************************")
-    print("**************************************************************************")
-    print("**************************************************************************")
-    print("**************************************************************************")
+
     story = "..............................................................\n"
     story += "..............................................................\n"
-    story += f"It was the night before Christmas and {name} was really {mood}.\n"
+    story += f"It was the night before Christmas" + \
+              "and {name} was really {mood}.\n"
     story += f"She would finally get to see her {family} after so long.\n"
-    story += f"{name} didn't care about {gift} from Santa Claus. She was just so happy to be able to have her {family} on Christmas day \n "
-    story += f"Christmas day arrived and {name} woke up early. She was {mood} when she heard the door open and in walked her {family} \n"
-    story += f"Emily ran into her {family}s arms and embraced them with the biggest hug ever.\n"
+    story += f"{name} didn't care about {gift} from Santa Claus." + \
+              "She was just so happy to be able to" + \
+              "have her {family} on Christmas day \n "
+    story += f"Christmas day arrived and {name} woke up early." + \
+              "She was {mood} when she heard the door open" +
+    "and in walked her {family} \n"
+    story += f"Emily ran into her {family}s arms and" + \
+              "embraced them with the biggest hug ever.\n"
     story += "It was the best Christmas ever!"
     print(story)
     morestories = input("Do you want another story ?")
@@ -153,16 +141,22 @@ def sporting_achievement():
     sport = item_selection(sports, "Sports", "Please choose a sport")
     injury = item_selection(injuries, "Injuries", "Please choose an injury")
     city = item_selection(cities, "Cities", "Please choose a city")
-    adjective = item_selection(adjectives, "Adjectives", "Please choose an adjective")
+    adjective = item_selection(adjectives, "Adjectives",
+                               "Please choose an adjective")
     # Printed story
 
     story = "..............................................................\n"
     story += "..............................................................\n"
-    story += f" It was the day of the great {sport} final. The whole of {city} were at the stadium \n"
-    story += " with 10 mins to go, both teams were level. The atmosphere was tense  \n"
-    story += f" The {sport} attacker was fouled just before they scored. Because of this they had a {injury} injury \n"
+    story += f" It was the day of the great {sport} final." + \
+              "The whole of {city} were at the stadium \n"
+    story += " with 10 mins to go, both teams were level." + \
+             "The atmosphere was tense  \n"
+    story += f" The {sport} attacker was fouled" + \
+              "just before they scored." + \
+              "Because of this they had a {injury} injury \n"
     story += " The penalty was awarded and everyone was tense \n"
-    story += " The home team won the match and everyone in the stadium went electric. \n"
+    story += " The home team won the match" + \
+             "and everyone in the stadium went electric. \n"
     story += f" It was such a {adjective} match! "
     print(story)
     morestories = input("Do you want another story ?")
@@ -176,7 +170,8 @@ def sporting_achievement():
 def joke_selection():
     # joke selection function
     # list of joke types
-    jokes = ['doctor...doctor', 'knock knock', 'chicken crossing the road', 'Funny Limericks']
+    jokes = ['doctor...doctor', 'knock knock',
+             'chicken crossing the road', 'Funny Limericks']
 
     def doctor_joke():
         # function which prints the doctor, doctor joke
@@ -217,7 +212,8 @@ def joke_selection():
 
     for (i, item) in enumerate(jokes, start=0):
         print(i, item)
-    jokeChoice = int(input("What Joke type would you like to hear from the list? "))
+    jokeChoice = int(input("What Joke type would you like to hear \
+                    from the list? "))
     # list all of the joke with the number proceeding the choice
 
     if jokeChoice == 0:
@@ -260,7 +256,7 @@ def main_function():
     print("3. Story about a great sporting match")
     print("4. A funny joke to cheer you up")
     print("5. Exit")
-    story_choice = int(input("Please choose a story option: 1, 2, 3, 4.............. "))
+    story_choice = int(input("Please choose a story option:1, 2, 3, 4: "))
 
     if(story_choice == 1):
         hero_story()
