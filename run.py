@@ -117,8 +117,8 @@ def christmas_story():
               "She was just so happy to be able to" + \
               "have her {family} on Christmas day \n "
     story += f"Christmas day arrived and {name} woke up early." + \
-              "She was {mood} when she heard the door open" +
-    "and in walked her {family} \n"
+              "She was {mood} when she heard the door open" + \
+              "and in walked her {family} \n"
     story += f"Emily ran into her {family}s arms and" + \
               "embraced them with the biggest hug ever.\n"
     story += "It was the best Christmas ever!"
