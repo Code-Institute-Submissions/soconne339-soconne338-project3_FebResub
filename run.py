@@ -13,20 +13,21 @@ def item_selection(items, title_message, input_message):
     print(title_message)
     valid_input = False
 
-    for (i, item) in enumerate(items, start=0):
+    for (i, item) in enumerate(items, start=1):
         print(i, item)
+
     while not valid_input:
         input_value = input(input_message)
         try:
-            num = int(input_message)
-            item = items[num]
+            num = int(input_value)
+            item = items[num-1]
             valid_input = True
         except (ValueError, IndexError):
             # throws exception so that
             # if a string or value greater than list index
             print("Invalid Input\n")
             valid_input = False
-        return item
+        return (item, num)
 
 
 def hero_story():
@@ -38,15 +39,15 @@ def hero_story():
     animals = ['dog', 'cat', 'hamster', 'rabbit']
     #
     #
-    name = item_selection(names, "Names", "Please choose a name:")
+    name, _ = item_selection(names, "Names", "Please choose a name: ")
     # Uses dictionary to create variable for name
-    transport = item_selection(transport, "Transport",
-                               "Please choose a transport option")
+    transport, _ = item_selection(transport, "Transport",
+                                  "Please choose a transport option")
     # Uses dictionary to create variable for transport
-    location = item_selection(locations, "Locations",
-                              "Please choose a location")
+    location, _ = item_selection(locations, "Locations",
+                                 "Please choose a location")
     # Uses dictionary to create variable for location
-    animal = item_selection(animals, "animals", 'Please choose an animal')
+    animal, _ = item_selection(animals, "animals", 'Please choose an animal')
     # Uses dictionary to create variable for animal
     #
     print("----------------------------")
@@ -71,10 +72,10 @@ def hero_story():
     story += f"{name} lived in {location} with his parents.\n"
     story += f"Everyday {name} would travel to school by {transport}.\n "
     story += f"One day {name} was going to school" + \
-              "when he saw a large black {animal}" + \
-              "running into the traffic.\n"
+        f"when he saw a large black {animal}" + \
+        "running into the traffic.\n"
     story += f"{name} immediately jumped and saved the {animal}." + \
-              "Everyone cheered. {name} was a hero."
+        f"Everyone cheered. {name} was a hero."
     print(story)
     morestories = input("Do you want another story ?")
     if morestories == "yes":
@@ -96,39 +97,45 @@ def christmas_story():
     gifts = ['toys', 'presents', 'goodies']
     #
     #
-    name = item_selection(names, "Names", "Please choose a name")
+    name, _ = item_selection(names, "Names", "Please choose a name: ")
     # Uses dictionary to create name variable
-    family = item_selection(familymembers,
-                            "Family members", "Please choose a family member")
+    family, _ = item_selection(familymembers,
+                               "Family members",
+                               "Please choose a family member: ")
     # Uses dictionary to create family member variable
-    gift = item_selection(gifts, "gifts", "Please choose a gift")
+    gift, _ = item_selection(gifts, "gifts", "Please choose a gift: ")
     # Uses dictionary to create gift variable
-    mood = item_selection(moods, "Moods", "Please choose a mood")
+    mood, _ = item_selection(moods, "Moods", "Please choose a mood: ")
     # Uses dictionary to create mood varaible
     #
     # Print story using the variables created above from the list objects
 
     story = "..............................................................\n"
     story += "..............................................................\n"
-    story += f"It was the night before Christmas" + \
-              "and {name} was really {mood}.\n"
+    story += "It was the night before Christmas" + \
+        f"and {name} was really {mood}.\n"
     story += f"She would finally get to see her {family} after so long.\n"
     story += f"{name} didn't care about {gift} from Santa Claus." + \
-              "She was just so happy to be able to" + \
-              "have her {family} on Christmas day \n "
+        "She was just so happy to be able to" + \
+        f"have her {family} on Christmas day \n "
     story += f"Christmas day arrived and {name} woke up early." + \
-              "She was {mood} when she heard the door open" + \
-              "and in walked her {family} \n"
+        f"She was {mood} when she heard the door open" + \
+        f"and in walked her {family} \n"
     story += f"Emily ran into her {family}s arms and" + \
-              "embraced them with the biggest hug ever.\n"
+        "embraced them with the biggest hug ever.\n"
     story += "It was the best Christmas ever!"
     print(story)
-    morestories = input("Do you want another story ?")
 
+    morestories, _ = play_again()
     if morestories == "yes":   # ask user if they want another story
         main_function()   # if yes
     else:
         exit()   # if user inputs anything other than yes then exit program
+
+
+def play_again():
+    options = ["yes", "no"]
+    return item_selection(options, "", "Do you want another story? ")
 
 
 def sporting_achievement():
@@ -138,29 +145,29 @@ def sporting_achievement():
     cities = ['Belfast', 'Wexford', 'Waterford', 'Sligo']
     adjectives = ['fantastic', 'amazing', 'incredible', 'brilliant']
     # Define our variables for the story
-    sport = item_selection(sports, "Sports", "Please choose a sport")
-    injury = item_selection(injuries, "Injuries", "Please choose an injury")
-    city = item_selection(cities, "Cities", "Please choose a city")
-    adjective = item_selection(adjectives, "Adjectives",
-                               "Please choose an adjective")
+    sport, _ = item_selection(sports, "Sports", "Please choose a sport")
+    injury, _ = item_selection(injuries, "Injuries", "Please choose an injury")
+    city, _ = item_selection(cities, "Cities", "Please choose a city")
+    adjective, _ = item_selection(adjectives, "Adjectives",
+                                  "Please choose an adjective")
     # Printed story
 
     story = "..............................................................\n"
     story += "..............................................................\n"
     story += f" It was the day of the great {sport} final." + \
-              "The whole of {city} were at the stadium \n"
+        f"The whole of {city} were at the stadium \n"
     story += " with 10 mins to go, both teams were level." + \
-             "The atmosphere was tense  \n"
+        "The atmosphere was tense  \n"
     story += f" The {sport} attacker was fouled" + \
-              "just before they scored." + \
-              "Because of this they had a {injury} injury \n"
+        "just before they scored." + \
+        f"Because of this they had a {injury} injury \n"
     story += " The penalty was awarded and everyone was tense \n"
     story += " The home team won the match" + \
-             "and everyone in the stadium went electric. \n"
+        "and everyone in the stadium went electric. \n"
     story += f" It was such a {adjective} match! "
     print(story)
-    morestories = input("Do you want another story ?")
 
+    morestories = input("Do you want another story ?")
     if morestories == "yes":
         main_function()
     else:
@@ -217,7 +224,6 @@ def joke_selection():
     # list all of the joke with the number proceeding the choice
 
     if jokeChoice == 0:
-
         doctor_joke()
 
     elif jokeChoice == 1:
@@ -240,7 +246,7 @@ def joke_selection():
     else:
         morestories = input("Would you to read something else? yes/no")
 
-        if(morestories == "yes"):
+        if morestories == "yes":
             main_function()
         else:
             exit()
@@ -249,29 +255,29 @@ def joke_selection():
 def main_function():
     # Main function which calls all the other functions
     # List of all the stories in program
-    print("Welcome to the story vault ")
-    print("Please choose a story from the list below \n")
-    print("1. Story about a hero character")
-    print("2. Story about a christmas reunion")
-    print("3. Story about a great sporting match")
-    print("4. A funny joke to cheer you up")
-    print("5. Exit")
-    story_choice = int(input("Please choose a story option:1, 2, 3, 4: "))
 
-    if(story_choice == 1):
+    options = [
+        "Story about a hero character",
+        "Story about a christmas reunion",
+        "Story about a great sporting match",
+        "A funny joke to cheer you up",
+        "Exit"
+        ]
+
+    value, story_choice = item_selection(options,
+                                         "Welcome to the story vault",
+                                         "Please choose a story option: ")
+
+    if story_choice == 1:
         hero_story()
-    elif (story_choice == 2):
+    elif story_choice == 2:
         christmas_story()
-    elif (story_choice == 3):
+    elif story_choice == 3:
         sporting_achievement()
-    elif (story_choice == 4):
+    elif story_choice == 4:
         joke_selection()
-    elif (story_choice == 5):
+    elif story_choice == 5:
         exit()
-    else:
-        print("invalid selection")
-        main_function()
-
 
 request_name()
 main_function()
