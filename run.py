@@ -1,15 +1,21 @@
 def request_name():
-    # This function will request the user's name which will then be
-    # printed before the list of stories is
+    """
+    request_name() - This function will request the user's name
+    which will then be
+    printed before the list of stories
+    """
     name = input("What's your name?: ")
     if name:
         print(f"Hello {name}")
 
 
 def item_selection(items, title_message, input_message):
-    # The purpose of this function is to create a dictionary that each of the
-    # stories can reference from. This avoids having to repeat code inside each
-    # of the story functions.
+    """
+     Item Selection() - The purpose of this function is to create a
+     dictionary that each of the stories can reference from.
+     This avoids having to repeat code inside each
+     of the story functions.
+     """
     print(title_message)
     valid_input = False
 
@@ -24,14 +30,17 @@ def item_selection(items, title_message, input_message):
             valid_input = True
         except (ValueError, IndexError):
             # throws exception so that
-            # if a string or value greater than list index
+            # if a string or value greater than list index or
+            # if value not an integer
             print("Invalid Input\n")
             valid_input = False
         return (item, num)
 
 
 def hero_story():
-    # Story 1
+    """
+    hero_story() - This function outputs the first story
+    """
     # Python lists are for each of the nouns as part of the story
     names = ['Brian', 'John', 'Alan', 'Robert', 'Tom', 'George']
     transport = ['car', 'bicycle', 'walking', 'motorbike']
@@ -73,6 +82,9 @@ def hero_story():
 
 
 def christmas_story():
+    """
+    christmas_story() - This function outputs story 2 from the list
+    """
     # Story 2
     # various lists containing the variables for the story
     names = ['Emily', 'Saoirse', 'Grace', 'Hannah', 'Sheena', 'Abigail']
@@ -118,16 +130,27 @@ def christmas_story():
 
 
 def play_again():
+    """
+    play_again() - This function asks the user if they would
+    like another story
+    """
     options = ["yes", "no"]
-    return item_selection(options, "", "Do you want another story? ")
+    return item_selection(options, "", "Do you want another story?: ")
 
 
 def play_again_jokes():
+    """
+    play_again_jokes() - This function asks the user if they would
+    like another joke
+    """
     options = ["yes", "no"]
-    return item_selection(options, "", "Do you want another joke?")
+    return item_selection(options, "", "Do you want another joke?: ")
 
 
 def sporting_achievement():
+    """
+    sporting_achievement()- This function outputs story 3
+    """
     # List of variables
     sports = ['football', 'rugby', 'gaelic football', 'hurling']
     injuries = ['leg', 'hamstring', 'arm', 'ankle']
@@ -164,6 +187,10 @@ def sporting_achievement():
 
 
 def joke_selection():
+    """
+    joke_selecttion() - This function outputs the jokes for option
+    4 from the story vault
+    """
     # joke selection function
     # list of joke types
     jokes = ['doctor...doctor', 'knock knock',
@@ -171,6 +198,8 @@ def joke_selection():
 
     def doctor_joke():
         # function which prints the doctor, doctor joke
+        print(".........................................")
+        print(".........................................")
         print("Doctor, Doctor! I feel like a pack of cards")
         print("Sit over there and I 'll deal with you later")
         print("************************")
@@ -182,6 +211,8 @@ def joke_selection():
 
     def knock_joke():
         # function which prints the knock knock joke
+        print(".........................................")
+        print(".........................................")
         print("Knock Knock! ")
         print("Who's there")
         print("Nobel Who?")
@@ -189,6 +220,8 @@ def joke_selection():
 
     def chicken_joke():
         # function which prints the chicken cross the road joke
+        print(".........................................")
+        print(".........................................")
         print("Why did the chicken cross the road? ")
         print("To get to the otherside")
         print("************************")
@@ -200,16 +233,18 @@ def joke_selection():
 
     def limerick_joke():
         # function which prints the limerick joke
+        print(".........................................")
+        print(".........................................")
         print("There once was a farmer from leeds ")
         print("Who swallowed a packet of seeds")
         print("It soon came to pass")
         print("He was covered in grass")
         print("But has all the tomatoes he needs")
 
-    for (i, item) in enumerate(jokes, start=0):
+    for (i, item) in enumerate(jokes, start=1):
         print(i, item)
     jokeChoice = int(input("What Joke type would you like to hear" +
-                           "from the list? "))
+                           " from the list? "))
     # list all of the joke with the number proceeding the choice
 
     if jokeChoice == 0:
@@ -267,6 +302,7 @@ def main_function():
         joke_selection()
     elif story_choice == 5:
         exit()
+
 
 request_name()
 main_function()
