@@ -1,7 +1,7 @@
 def request_name():
     # This function will request the user's name which will then be
     # printed before the list of stories is
-    name = input("What's your name?")
+    name = input("What's your name?: ")
     if name:
         print(f"Hello {name}")
 
@@ -42,42 +42,26 @@ def hero_story():
     name, _ = item_selection(names, "Names", "Please choose a name: ")
     # Uses dictionary to create variable for name
     transport, _ = item_selection(transport, "Transport",
-                                  "Please choose a transport option")
+                                  "Please choose a transport option: ")
     # Uses dictionary to create variable for transport
     location, _ = item_selection(locations, "Locations",
-                                 "Please choose a location")
+                                 "Please choose a location: ")
     # Uses dictionary to create variable for location
-    animal, _ = item_selection(animals, "animals", 'Please choose an animal')
+    animal, _ = item_selection(animals, "animals", 'Please choose an animal: ')
     # Uses dictionary to create variable for animal
     #
-    print("----------------------------")
-    print("    |@@@@|     |####| ")
-    print("    |@@@@|     |####| ")
-    print("    |@@@@|     |####| ")
-    print("    \@@@@|     |####/ ")
-    print("     \@@@|     |###/ ")
-    print("      `@@|_____|##' ")
-    print("           (O)      ")
-    print("        .-'''''-.   ")
-    print("      .'  * * *  `. ")
-    print("     :  *       *  :")
-    print("    : ~ G O L D ~   : ")
-    print("    : ~ A W A R D ~ : ")
-    print("     :  *       *  :  ")
-    print("       * * * * * *     ")
-    print("        `-.....-'     ")
     story = "..............................................................\n"
     story += "..............................................................\n"
     story += f"Once upon a time there was a boy called {name}.\n"
     story += f"{name} lived in {location} with his parents.\n"
     story += f"Everyday {name} would travel to school by {transport}.\n "
     story += f"One day {name} was going to school" + \
-        f"when he saw a large black {animal}" + \
-        "running into the traffic.\n"
+        f" when he saw a large black {animal}" + \
+        " running into the traffic.\n"
     story += f"{name} immediately jumped and saved the {animal}." + \
-        f"Everyone cheered. {name} was a hero."
+        f" Everyone cheered. {name} was a hero."
     print(story)
-    morestories = input("Do you want another story ?")
+    morestories, _ = play_again()
     if morestories == "yes":
         # conditional statement asking user
         # if they want to hear another story
@@ -113,16 +97,16 @@ def christmas_story():
     story = "..............................................................\n"
     story += "..............................................................\n"
     story += "It was the night before Christmas" + \
-        f"and {name} was really {mood}.\n"
+        f" and {name} was really {mood}.\n"
     story += f"She would finally get to see her {family} after so long.\n"
-    story += f"{name} didn't care about {gift} from Santa Claus." + \
+    story += f"{name} didn't care about the {gift}." + \
         "She was just so happy to be able to" + \
-        f"have her {family} on Christmas day \n "
-    story += f"Christmas day arrived and {name} woke up early." + \
-        f"She was {mood} when she heard the door open" + \
-        f"and in walked her {family} \n"
+        f" have her {family} on Christmas day \n "
+    story += f"The day arrived and {name} woke up early." + \
+        f"She was so excited when she heard the door open" + \
+        f" snd in walked her {family} \n"
     story += f"Emily ran into her {family}s arms and" + \
-        "embraced them with the biggest hug ever.\n"
+        " embraced them with the biggest hug ever.\n"
     story += "It was the best Christmas ever!"
     print(story)
 
@@ -136,6 +120,11 @@ def christmas_story():
 def play_again():
     options = ["yes", "no"]
     return item_selection(options, "", "Do you want another story? ")
+
+
+def play_again_jokes():
+    options = ["yes", "no"]
+    return item_selection(options, "", "Do you want another joke?")
 
 
 def sporting_achievement():
@@ -155,19 +144,19 @@ def sporting_achievement():
     story = "..............................................................\n"
     story += "..............................................................\n"
     story += f" It was the day of the great {sport} final." + \
-        f"The whole of {city} were at the stadium \n"
+        f" The whole of {city} were at the stadium \n"
     story += " with 10 mins to go, both teams were level." + \
-        "The atmosphere was tense  \n"
+        " The atmosphere was tense  \n"
     story += f" The {sport} attacker was fouled" + \
-        "just before they scored." + \
-        f"Because of this they had a {injury} injury \n"
+        " just before they scored." + \
+        f" Because of this they had a {injury} injury \n"
     story += " The penalty was awarded and everyone was tense \n"
     story += " The home team won the match" + \
-        "and everyone in the stadium went electric. \n"
+        " and everyone in the stadium went electric. \n"
     story += f" It was such a {adjective} match! "
     print(story)
 
-    morestories = input("Do you want another story ?")
+    morestories, _ = play_again()
     if morestories == "yes":
         main_function()
     else:
@@ -219,8 +208,8 @@ def joke_selection():
 
     for (i, item) in enumerate(jokes, start=0):
         print(i, item)
-    jokeChoice = int(input("What Joke type would you like to hear \
-                    from the list? "))
+    jokeChoice = int(input("What Joke type would you like to hear" +
+                           "from the list? "))
     # list all of the joke with the number proceeding the choice
 
     if jokeChoice == 0:
@@ -239,12 +228,12 @@ def joke_selection():
         print("Invalid Selection")
         joke_selection()
 
-    morejokes = input("Would you like another joke? yes/no? ")
+    morejokes, _ = play_again_jokes()
 
     if morejokes == "yes":
         joke_selection()
     else:
-        morestories = input("Would you to read something else? yes/no")
+        morestories, _ = play_again()
 
         if morestories == "yes":
             main_function()
