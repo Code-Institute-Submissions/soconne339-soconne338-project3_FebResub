@@ -96,8 +96,6 @@ The user is requested to input the value next to the story. As soon as this is d
 
 The program asks for many different variables for the story. 
 
-![testing image 3](./assets/images/program-4.png)
-
 The user can create the story exactly how they want it. rf
 
 ![testing image 3](./assets/images/program-5.png)
@@ -108,7 +106,12 @@ Eventually after the user inputs the values for each variable from each list the
 
 If the user inputs a value greater than the index or provides a value that can't be cast to an integer, then the code will return a invalid error. The exception for ValueError and IndexError are thrown in this case. 
 
-![testing image 4](./assets/images/program-8.png)
+![Testing image shows error handling](./assets/images/program-9.png)
+
+After each story the program asks the user if they would like another story. This was created using the function item_selecttion() and a list of possible options was passed into the function. 
+
+
+![testing image 4](./assets/images/program-4.png)
 
 
 ## Main issues/ bugs
