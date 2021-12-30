@@ -157,11 +157,12 @@ def sporting_achievement():
     cities = ['Belfast', 'Wexford', 'Waterford', 'Sligo']
     adjectives = ['fantastic', 'amazing', 'incredible', 'brilliant']
     # Define our variables for the story
-    sport, _ = item_selection(sports, "Sports", "Please choose a sport")
-    injury, _ = item_selection(injuries, "Injuries", "Please choose an injury")
-    city, _ = item_selection(cities, "Cities", "Please choose a city")
+    sport, _ = item_selection(sports, "Sports", "Please choose a sport?: ")
+    injury, _ = item_selection(injuries, "Injuries",
+                               "Please choose an injury?: ")
+    city, _ = item_selection(cities, "Cities", "Please choose a city?: ")
     adjective, _ = item_selection(adjectives, "Adjectives",
-                                  "Please choose an adjective")
+                                  "Please choose an adjective?: ")
     # Printed story
 
     story = "..............................................................\n"
@@ -246,17 +247,17 @@ def joke_selection():
     jokeChoice = int(input("What Joke type would you like to hear" +
                            " from the list? "))
     # list all of the joke with the number proceeding the choice
-
-    if jokeChoice == 0:
+    # if user picks 0 then display doctorJoke
+    if jokeChoice == 1:
         doctor_joke()
-
-    elif jokeChoice == 1:
-        knock_joke()
-
+    # if user picks 1 then display knock knock joke
     elif jokeChoice == 2:
+        knock_joke()
+    # if user pics 
+    elif jokeChoice == 3:
         chicken_joke()
 
-    elif jokeChoice == 3:
+    elif jokeChoice == 4:
         limerick_joke()
 
     else:
