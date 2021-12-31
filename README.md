@@ -119,7 +119,9 @@ Option 4 brings up a list of jokes that the user can choose. After the user has 
 
 If the user chooses not to display another joke the program then asks if the user would like to read another story. In this case the code executes main_function().
 
-![joke testing image 2](./asssets/images/joke-testing-2.png)
+![joke testing image 2](./assets/images/joke-test02.png)
+
+The program runs efficiently with no issues. The testing confirms this
 
 
 ## Main issues/ bugs
