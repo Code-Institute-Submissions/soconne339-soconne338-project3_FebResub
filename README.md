@@ -113,6 +113,14 @@ After each story the program asks the user if they would like another story. Thi
 
 ![testing image 4](./assets/images/program-4.png)
 
+Option 4 brings up a list of jokes that the user can choose. After the user has chosen the chosen joke the program asks if they would like another joke which executes joke_selection() function if the user says yes.
+
+![joke testing image 1](./assets/images/joke-testing.png)
+
+If the user chooses not to display another joke the program then asks if the user would like to read another story. In this case the code executes main_function().
+
+![joke testing image 2](./asssets/images/joke-testing-2.png)
+
 
 ## Main issues/ bugs
 
