@@ -34,7 +34,8 @@ def item_selection(items, title_message, input_message):
             # if value not an integer
             print("Invalid Input\n")
             valid_input = False
-        return (item, num)
+
+    return (item, num)
 
 
 def hero_story():
